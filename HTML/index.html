@@ -6,7 +6,51 @@
     <title>TOP projects</title>
 </head>
 <body>
-<h1>Deekshith's TOP Dashboard</h1>
-<p>Welcome to my TOP projects dashboard! Here I'm gonna showcase all the projects I'm building as I learn from The Odin Project (TOP).</p>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="./pages/about.html">About</a></li>
+</ul>
+    <h1>Deekshith's TOP Dashboard</h1>
+    <p>Welcome to my TOP projects dashboard! Here I'm gonna showcase all the projects I'm building as I learn from The Odin Project (TOP).</p>
+    <p>I will try to use the course material to build this page which would reflect my learning journey.</p>
+    <h2>Here's how text is handled in HTML</h2>
+    <p> Using the paragraph tag &lt;p&gt; makes life easy while the other tags like &lt;h1&gt; through &lt;h6&gt; are used for headings and structure.</p>
+    <textarea> This is text area yo! </textarea>
+    <p> Textarea tag is used to create a multi-line text input field. It's code is <em>&lt;textarea&gt;&lt;/textarea&gt;</em></p>
+    <h2> Lists</h2>
+    <p> speaking about lists, lets add the list of the HTML curriculum from TOP to demonstrate how to use lists</p>
+    <p> Damn! I need to acknowledge the ease of coding in VS Code with its auto complete feature.</p>
+    <p> Here is the list of HTML curriculum from TOP:</p>
+    <ol>
+    <li>Introduction to HTML and CSS</li>
+    <li>Elements and Tags</li>
+    <li>HTML Boilerplate <i>(the name is kinda funny)</i></li>
+    <li>Working with text</li>
+    <li>Lists</li>
+    <li>Links and Images</li>
+    <li>Commit Messages</li>
+    <li>Project: Recipies <i>(I am making a learning journal)</i></li>
+</ol>
+<p> This is what's called an ordered list. It is ordered list because it signifies the most effective order of completing the curriculum.</p>
+<p> If I were to randomly learn the curriculum, I would miss important foundational concepts. The learning curve would rather be steeper and less efficient.</p>
+
+<h2> Links</h2>
+<p>Now we will look at links and stuff. so &lt;a href="..."&gt; is used to create links in HTML.</p>
+<p>For example, here is a link to the TOP website: <a href="https://www.theodinproject.com">The Odin Project</a> </p><p><em>(I swear to god, why is VS code auto completing everything man! I'm using it to learn and memorise stuff, but this tool is not letting me use my brain to write even text. Its like using a text generator rather than a code editor. I might seriously consider using VS code to write my assignments fr.)</em></p>
+<p> Now lets open that website in a new tab by adding this target="_blank" and rel="noopener noreferrer" attributes.</p>
+<p>Here is the link to TOP website opening in a new tab: <a href="https://www.theodinproject.com" target="_blank" rel="noopener noreferrer">The Odin Project</a></p>
+<p> Still learning what these noopener and noreferrer actually are. I did understand about noreferrer, when you click that link and visit TOP, TOP will not know you clicked that link from my webpage. It would more or less be like you pasting that link in a new tab manually. This way my webpage makes sure TOP doesn't record my webpage as a source of their traffic.</p>
+<p>All right chat. Now I read and understood what noopener actually does. It is a security feature and it prevents something known as tabnabbing. There's something called windows.opener. So whats this? In case you ever been on shady/ piracy sites trying to download stuff. You might have noticed how the new tab opens a link and the previous tab redirects to advertisements. This redirection to third-party site and stuff is exactly what tabnabbing is. If you add a noopener, shady people won't be able to do this and other shady stuff. Basically, <strong>the new tab and the original tab will act as if they are isolated from each other.</strong></p>
+
+<p> Now that we have learned how to add absolute links like TOP website. Lets add a relative link to the about page:</p>
+<p><a href="./pages/about.html">About </a> This is the link to another page on the same website domain. To add anchor tag &lt;a href="..."&gt; to such relative pages, we just add about.html in the href attribute like this <em> &lt;a href="about.html"&gt;About&lt;/a&gt; </em></p>
+
+<h2>Images</h2>
+<p> Now lets add an Image to our website</p>
+<p> To add an image, we use the &lt;img&gt; tag. The img tag is a self closing tag and it doesn't have a closing tag like &lt;/img&gt;. The img tag uses attributes like src and alt to define the source of the image and the alternative text respectively.</p>
+<p> The src attribute is used to specify the path to the image file. It's similar to href attribute in an anchor tag &lt;a href="..."&gt;. It can be an absolute path or a relative path. The alt attribute is used to provide alternative text for the image in case the image cannot be displayed.</p>
+<p> Here is an example of an image tag:</p>
+<img src="./images/vdlogo.jpg" alt="VD logo" width="200" height="auto">
+
 </body>
 </html>
