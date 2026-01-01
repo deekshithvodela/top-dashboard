@@ -75,6 +75,7 @@
         <li><a href="#CSS Comments">CSS Comments</a></li>
         <li><a href="#selectors-assignment">Top Assignment on Selectors</a></li>
         <li><a href="#cascade-assignment">Cascade Assignment</a></li>
+        <li><a href="#hierarchy-cascade">Hierarchy/Cascade</a></li>
 </ol>
 </nav>
 <section id="Introduction">
@@ -322,6 +323,17 @@ h3 p {
 
 </section>
 </Section>
+<section id="hierarchy-cascade">
+<h2><a class="nav-link" href="#hierarchy-cascade">Hierarchy/Cascade</a></h2>
+<p>I learnt this through this experimentation. Let's unroll this stull!!</p>
+<p>On my local machine, it was working fine. The issue was github.io pages was not interpreting my css properly and some of the code was not reflecting there.</p>
+<p>I added CSS internally and I also made an external styles css sheet. I defined some stuff in the external sheet, but it was not reflecting in this page. I wondered what the reason would be?</p>
+<p> Then I realised, Internal CSS takes precedence over External CSS when both are applied to the same element. BUT, BUT, BUT... I didn't define those classes in the internal CSS code. I wondered why it was conflicting with the external CSS file.</p>
+<p>Then I made this simple fix. In the head element, Style code was written last and link tag was written first. I changed the order. cut the link tag line and paste it at the bottom of style element within the head element.
+</p><p>I remembered that the last line has more precedence in CSS hierarchy. So the external CSS file should be written last in the head element to take precedence over the internal CSS code.</p>
+<p>And it worked!</p>
+<p> I had to make couple of git commits to figure this out though! It did help me understand the CSS cascade better. (That itch to not make a git commit until there is a significant change was making me feel bad though LOL.)</p>
+    </section>
 
 </article>
 </body>
