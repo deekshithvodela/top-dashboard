@@ -66,27 +66,45 @@ code {
 }
 
 /* adds style to code-boxes */
-pre,.rendered-html  {
+pre {
   background-color: #bac8b5;
   border: 1px solid #001406;
   padding: 12px;
   border-radius: 6px;
-  overflow-x: auto;
+  width:auto;
+  height:auto;
+  white-space: pre-line;
+  overflow-x:auto;
+}
+
+.rendered-html  {
+  background-color: #bac8b5;
+  border: 1px solid #001406;
+  padding: 12px;
+  border-radius: 6px;
   width:auto;
   height:auto;
   overflow-x:auto;
-  white-space: pre-line;
 }
 
 /* removes the underline of subheadings added as links */
 .nav-link {
   text-decoration:none;
   color:black;
-  visited {
-    color: inherit;
-  }
-  hover {
-    color:purple
-  }
 }
 
+.nav-link:hover {
+  text-decoration:underline;
+  color:rgb(0, 0, 0);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background: yellow;
+  color: black;
+}
