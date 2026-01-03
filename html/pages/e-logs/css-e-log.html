@@ -1,344 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-   
-    <style>
-        #Top\ Assignment\ on\ Selectors { color: darkblue; }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CSS
+        </title>
+        <style>
+            #Top\ Assignment\ on\ Selectors { color: darkblue; }
 
-        .example-class {
-    color: blue;
-}
-#example-id {
-    color: red;
-}
-.list-item-1, .list-item-2, .list-item-3, .list-item-4 {
-    color: purple;
-    font-weight: bold;
-}
-#list-item-1, #list-item-2, #list-item-3, #list-item-4 {
-    font-size: 1em;
-}
-.chain.class-one {
-    color: orange;
-}
-.chain {
-    color: green;
-}
-  .para {
-            font-weight: bold; 
-            
-         }
-         .para.small-para {
-            font-size: 0.7em;
-         }
-         #confirm-button {
-            background-color:green
-         }
-         .button {
-            font-weight:bold;
-         }
-         #cancel-button {
-            background-color:red
-         }
-         div.text {
-            font-weight: thin;
-         }
-            div .child{
-                font-weight: bold;
-                font-size: 0.7em;
-               
+            .example-class {
+            color: blue;
             }
-
-
-    </style>
-
-     <link rel="stylesheet" href="../../css/styles.css">
-</head>
-<body>
-    <navigation>
-    <ul type="none" style="display: flex; gap: 10px;">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../pages/about.html">About</a></li>
-        <li><a href="../../pages/e-logs.html">E-Log</a></li>
-    </ul>
-</navigation>
-
-   
- <h1>Deekshith's TOP Dashboard - CSS</h1>
-  <article>
-    <nav id="table-of-contents">
-    
-    <h2>Table of Contents</h2>
-<ol>
-      <li><a href="#Introduction">Introduction</a></li>
-        <li><a href="#CSS Syntax">CSS Syntax</a></li>
-        <li><a href="#Adding CSS in HTML">Adding CSS in HTML</a></li>
-        <li><a href="#CSS Comments">CSS Comments</a></li>
-        <li><a href="#selectors-assignment">Top Assignment on Selectors</a></li>
-        <li><a href="#cascade-assignment">Cascade Assignment</a></li>
-        <li><a href="#hierarchy-cascade">Hierarchy/Cascade</a></li>
-</ol>
-</nav>
-
-<section id="Introduction">
-    <h2><a class="nav-link" href="#Introduction">Introduction</a></h2>
-      <p>CSS is Cascading Style Sheets. It is a style sheet language used for describing the presentation of a document written in HTML or XML.</p>
-</section>
-<section id="CSS Syntax">
-      <h2><a class="nav-link" href="#CSS Syntax">CSS Syntax</a></h2>
-      <p>CSS is made up of selectors and declaration blocks. The selector points to the HTML element you want to style. The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon.</p>
-      <pre>
-selector {
-    property: value;
-    property2: value2;
-}
-      </pre>
-      <p><em>As I'm starting out, I'm typing equals (=) in place of colon (:) in my CSS code. It might take a while to get accustomed to the syntax but hopefully I will get there sooner.</em></p>
-      
-      <h3> Selectors</h3>
-        <p> There are different types of selectors in CSS:</p>  
-        <ul>
-            <li>Element Selector: Selects HTML elements based on their tag name. Example: <code>p { color: blue; }</code></li>
-            <li>Class Selector: Selects HTML elements based on their class attribute. Example: <code>.classname { font-size: 14px; }</code></li>
-            <li>ID Selector: Selects a single HTML element based on its ID attribute. Example: <code>#idname { margin: 10px; }</code></li>
-            <li>Universal Selector:Selects all HTML elements. Example: <code>* { box-sizing: border-box; }</code></li>
-        </ul>       
-        <h3> Declarations</h3>  
-        <p> Declarations consist of a property and a value. The property is the aspect of the element you want to change, and the value is what you want to change it to. Example: <code>color: red;</code> changes the text color to red.</p>
-        <p> Multiple declarations are separated by semicolons within the declaration block.</p> 
-        <pre>
-p {
-    color: red;
-    font-size: 16px;
-}
-        </pre>      
-        <p> In the above example, the selector is <code>p</code>, and the declaration block contains two declarations: <code>color: red;</code> and <code>font-size: 16px;</code>.</p>      
-        <p> CSS rules can be combined to create more specific selectors. For example:</p>
-        <pre>
-div p {
-    color: green;
-}
-        </pre>
-        <p> In this example, the selector <code>div p</code> selects all <code>&lt;p&gt;</code> elements that are inside a <code>&lt;div&gt;</code> element and changes their text color to green.</p>  
-
-</section>
-<section id="Adding CSS in HTML">
-    <h2><a class="nav-link" href="#Adding CSS in HTML">Adding CSS in HTML</a></h2>
-      <p>There are three ways to add CSS to HTML: Inline CSS, Internal CSS, and External CSS.</p>
-      <h3>Inline CSS</h3>
-      <p>Inline CSS is used to apply a unique style to a single HTML element. To use inline CSS, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
-      <pre>
-&lt;h1 style="color:blue; text-align:center;"&gt;This is a heading&lt;/h1&gt;
-      </pre>
-      <h3>Internal CSS</h3>       
-      <p>Internal CSS is used to define a style for a single HTML page. To use internal CSS, add a &lt;style&gt; element inside the &lt;head&gt; section of the HTML page.</p>
-      <pre>
-&lt;head&gt;
-    &lt;style&gt;
-        body {
-            background-color: lightblue;
-        }
-        h1 {
-            color: white;
-            text-align: center;
-        }
-        p {
-            font-family: verdana;
-            font-size: 20px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-      </pre>
-      <h3>External CSS</h3>
-      <p>External CSS is used to define styles for multiple HTML pages. To use external CSS, you need to create a separate CSS file and link it to your HTML file using the &lt;link&gt; element inside the &lt;head&gt; section of the HTML page.</p>
-      <pre>
-&lt;head&gt;
-    &lt;link rel="stylesheet" href="styles.css"&gt; 
-&lt;/head&gt;
-      </pre>
-      <p>In the above code, "styles.css" is the name of the external CSS file.</p>
-</section>
-<section id="CSS Comments">
-    <h2><a class="nav-link" href="#CSS Comments">CSS Comments</a></h2>
-      <p>Comments in CSS are used to explain the code and make it more readable. Comments are ignored by browsers and do not affect the rendering of the document. In CSS, comments are written inside /* and */.</p>
-      <pre>
-/* This is a comment in CSS */ 
-body {
-    background-color: lightblue; /* This sets the background color */
-}
-      </pre>
-</section>
-<Section id="assignments">
-    <h2><a class="nav-link" href="#assignments">Assignments</a></h2>
-    <strong>Some of the assignments will have their CSS code as internal CSS code. </strong>
-<section id="selectors-assignment">
-    <h3 id="Top Assignment on Selectors"><a class="nav-link" href="#Top Assignment on Selectors">Top Assignment on Selectors</a></h3>
-     <p> here Im going to use some selectors (class selectors, id selectors, type selectors and universal selectors) to showcase the assignment here. </p>
-     <h4>CSS Methods</h4>
-     <p> I have attached an external css file to this project in the ~/css/styles.css file in the repo. Thats how external method works</p>
-        <p> I have also used internal css method in this file itself in the &lt;head&gt; section to set some styles for the body and h1 tags. 
-          I am assigning id="Top Assignment on Selectors" to the heading of this section. Now to target this id selector in the internal css method, I have used the following code:
-            <pre>
-#Top\ Assignment\ on\ Selectors { color: darkblue; }
-            </pre>
-            As you can see the back slashes are used to escape the spaces in the id selector. Ideally one should never use spaces and use hyphens or underscores instead. Hyphens are more preffered.
-            Now the heading of this section is dark blue colored because of the above internal css code.
-        </p>
-        <p>Another method is the inline css method, which is used to apply a unique style to a single HTML element. To use inline CSS, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
-
-        <p style="color: green; font-weight: bold;"> This text is green and bold because of the inline css method used here in this &lt;p&gt; tag.</p>
-       <p> Here is the code snippet for inline css:</p>
-        <pre>
-&lt;p style="color: green; font-weight: bold;"&gt; This text is green and bold because of the inline css method used here in this &lt;p&gt; tag.&lt;/p&gt;
-        </pre>
-        <h4>Class Id Selectors</h4>
-        <p> In the previous section we saw how I selected id="Top Assignment on Selectors" using the internal CSS method. In this assignment we need to assign and understand how class and id selectors work.
-            In heirarchy, id selectors have more specificity than class selectors. This means that if both an id selector and a class selector target the same element, the styles defined in the id selector will take precedence over those defined in the class selector.
-        </p>
-        <div>
-            <p class="example-class" id="example-id"> This paragraph has both a class and an id selector. The text color should be red because of the id selector having more specificity than the class selector.</p>
-            <p> Here is the code snippet for the above paragraph:</p>
-            <pre>
-&lt;style&gt;
-.example-class {
-    color: blue;
-}
-#example-id {
-    color: red;
-}
-&lt;/style&gt;  
-&lt;p class="example-class" id="example-id"&gt; This paragraph has both a class and an id selector. The text color should be red because of the id selector having more specificity than the class selector.&lt;/p&gt;
-            </pre>
-            <p> With class selector, we can select all the elements with same class at a time and write a single css syntax that applies to all the elements with that specific class. But this doesn't apply to id because we can assign a specific id to only one element.</p>
-
-        </div>
-        <p> now lets group some selectors</p>
-        <p> Im writing these next 4 list items with classes and ids named after themselves. </p>
-        <ul><li class="list-item-1" id="list-item-1">List Item 1</li>
-            <li class="list-item-2" id="list-item-2">List Item 2</li>
-            <li class="list-item-3" id="list-item-3">List Item  3</li>
-            <li class="list-item-4" id="list-item-4">List Item  4</li>
-        </ul>
-        <p> Now I will group the class selectors and id selectors separated by comma in the internal css method to apply same styles to them. The code snippet is as below: </p>
-        
-        <pre>
-.list-item-1, .list-item-2, .list-item-3, .list-item-4 {
-    color: purple;
-    font-weight: bold;
-}
-#list-item-1, #list-item-2, #list-item-3, #list-item-4 {
-    font-size: 18px;
-}
-        </pre>
-        <h4>Chaining Selectors</h4>
-<p>Now lets look at chaining selctors</p>
-<p> This is a list of elements with multiple classes defined as themselves.</p>
-<ul>
-    <li class="chain class-one" id="chain-one">class"chain class-one"</li>
-    <li class="chain class-two" id="chain-two">class"chain class-two"</li>
-    <li class="chain class-three" id="chain-three">class"chain class-three"</li>
-</ul>
-<p> The code snippet is as follows:
-        <pre>
-.chain.class-one {
-    color: orange;
-}
-.chain {
-    color: green;
-}
-
-</p></pre>
-<p> As you can see how the 1st one is in red color while the other two are in green color. If we write the classes assigned to an element with no space we are chaining the selectors to pick the element that contains specifically all those selectors.</p>
-<h4>Descending Combinators</h4>
-<p> This is similar to how you navigate through folders in a linux/ wsl command line with cd command. more or less like the folder tree. If you have more than 1 similar parent and child elements like &lt;p class="paragraphs"&gt; within &lt;h2 class="subheading"&gt;tags and you want to target a specific &lt;p class="paragraphs"&gt; child element within a specific &lt;h2 class="subheading"&gt; element, we use descending combinators.</p>
-<p> Here is an example: (observe the syntax, a single space between the classes defines descending combinator.)</p>
-<pre>
-h2.subheading p.paragraphs {
-    color: brown;       
-}   
-</pre>
-<p> In the above code snippet, we are targeting only the &lt;p class="paragraphs"&gt; elements that are descendants of &lt;h2 class="subheading"&gt; elements. Any &lt;p class="paragraphs"&gt; elements that are not within an &lt;h2 class="subheading"&gt; element will not be affected by this rule.</p>
-<p> A more practical use case would be to target all the &lt; p &gt; elements within all &lt; h3 &gt; elements with a single command as follows:</p>
-<pre>   
-h3 p {
-    font-style: italic;
-}
-</pre>
-<p> Now this will format all the &lt;p&gt; elements within all &lt;h3&gt; elements with italic font style.</p>
-</section>
-
-<section id="cascade-assignment">
-    <h3><a class="nav-link" href="#cascade-assignment">Cascade Assignment</a></h3>
-    <p> I'm copying the html code directly from the assignments provided by the TOP here to finish my assignment.</p>
-   <p> Here is the assignment HTML code:</p>
-    <pre>    
-         &lt;p class="para"&gt;I'm just a paragraph with extra bold text!&lt;/p&gt;
-    &lt;p class="para small-para"&gt;I'm a smaller paragraph, also with extra bold text&lt;/p&gt;
-
-    &lt;button id="confirm-button" class="button confirm"&gt;Confirm&lt;/button&gt;
-    &lt;button id="cancel-button" class="button cancel"&gt;Cancel&lt;/button&gt;
-    &lt;div class="text"&gt;I'm a div with thin text!&lt;/div&gt;
-    &lt;div class="text"&gt;I'm a div with thin text and a child div!
-      &lt;div class="text child"&gt;I'm a smaller child div with extra bold text.&lt;/div&gt;
-    &lt;/div&gt;
-     </pre>
-     <h4>Rendered HTML from the above code with CSS modification:</h4>
-<section class="rendered-html">
-
-         <p class="para">I'm just a paragraph with extra bold text!</p>
-    <p class="para small-para">I'm a smaller paragraph, also with extra bold text!</p>
-
-    <button id="confirm-button" class="button confirm">Confirm</button>
-    <button id="cancel-button" class="button cancel">Cancel</button>
-
-    <div class="text">I'm a div with thin text!</div>
-    <div class="text">I'm a div with thin text and a child div!
-      <div class="text child">I'm a smaller child div with extra bold text.</div>
-    </div>
-   </section>
-    <p>Here is the CSS Code for the above assignment HTML code:</p>
-    <pre>
-         .para {
+            #example-id {
+            color: red;
+            }
+            .list-item-1, .list-item-2, .list-item-3, .list-item-4 {
+            color: purple;
             font-weight: bold;
-         }
-         .para.small-para {
-            font-size: 0.7em;
-         }
-         #confirm-button {
-            background-color:green
-         }
-         .button {
-            font-weight:bold;
-         }
-         #cancel-button {
-            background-color:red
-         }
-         div.text {
-            font-weight: thin;
-         }
-            div .child{
-                font-weight: bold;
-                font-size: 0.7em;
             }
-    </pre>
+            #list-item-1, #list-item-2, #list-item-3, #list-item-4 {
+            font-size: 1em;
+            }
+            .chain.class-one {
+            color: orange;
+            }
+            .chain {
+            color: green;
+            }
+            .para {
+            font-weight: bold; 
+            }
+            .para.small-para {
+            font-size: 0.7em;
+            }
+            #confirm-button {
+            background-color:green
+            }
+            .button {
+            font-weight:bold;
+            }
+            #cancel-button {
+            background-color:red
+            }
+            div.text {
+            font-weight: thin;
+            }
+            div .child{
+            font-weight: bold;
+            font-size: 0.7em;
+            }
+        </style>
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <navigation>
+            <ul type="none" style="display: flex; gap: 10px;">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/about.html">About</a></li>
+                <li><a href="../../pages/e-logs.html">E-Log</a></li>
+            </ul>
+        </navigation>
 
-</section>
-</Section>
-<section id="hierarchy-cascade">
-<h2><a class="nav-link" href="#hierarchy-cascade">Hierarchy/Cascade</a></h2>
-<p>I learnt this through this experimentation. Let's unroll this stuff!!</p>
-<p>On my local machine, it was working fine. The issue was github.io pages was not interpreting my css properly and some of the code was not reflecting there.</p>
-<p>I added CSS internally and I also made an external styles css sheet. I defined some stuff in the external sheet, but it was not reflecting in this page. I wondered what the reason would be?</p>
-<p> Then I realised, Internal CSS takes precedence over External CSS when both are applied to the same element. BUT, BUT, BUT... I didn't define those classes in the internal CSS code. I wondered why it was conflicting with the external CSS file.</p>
-<p>Then I made this simple fix. In the head element, Style code was written last and link tag was written first. I changed the order. cut the link tag line and paste it at the bottom of style element within the head element.
-</p><p>I remembered that the last line has more precedence in CSS hierarchy. So the external CSS file should be written last in the head element to take precedence over the internal CSS code.</p>
-<p>And it worked!</p>
-<p> I had to make couple of git commits to figure this out though! It did help me understand the CSS cascade better. (That itch to not make a git commit until there is a significant change was making me feel bad though LOL.)</p>
-    </section>
+        <article>
+            <h1>Deekshith's TOP Dashboard - CSS</h1>
+            <nav id="table-of-contents">
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#Introduction">Introduction</a></li>
+                    <li><a href="#CSS Syntax">CSS Syntax</a></li>
+                    <li><a href="#Adding CSS in HTML">Adding CSS in HTML</a></li>
+                    <li><a href="#CSS Comments">CSS Comments</a></li>
+                    <li><a href="#selectors-assignment">Top Assignment on Selectors</a></li>
+                    <li><a href="#cascade-assignment">Cascade Assignment</a></li>
+                    <li><a href="#hierarchy-cascade">Hierarchy/Cascade</a></li>
+                </ol>
+            </nav>
 
-</article>
-</body>
+            <section id="Introduction">
+                <h2><a class="nav-link" href="#Introduction">Introduction</a></h2>
+                <p>CSS is Cascading Style Sheets. It is a style sheet language used for describing the presentation of a document written in HTML or XML.</p>
+            </section>
+            <section id="CSS Syntax">
+                <h2><a class="nav-link" href="#CSS Syntax">CSS Syntax</a></h2>
+                <p>CSS is made up of selectors and declaration blocks. The selector points to the HTML element you want to style. The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon.</p>
+                <pre>
+                    selector {
+                    &ensp;property: value;
+                    &ensp;property2: value2;
+                    }
+                </pre>
+                <p><em>As I'm starting out, I'm typing equals (=) in place of colon (:) in my CSS code. It might take a while to get accustomed to the syntax but hopefully I will get there sooner.</em></p>
+                <h3> Selectors</h3>
+                <p> There are different types of selectors in CSS:</p>  
+                <ul>
+                    <li>Element Selector: Selects HTML elements based on their tag name. Example: <code>p { color: blue; }</code></li>
+                    <li>Class Selector: Selects HTML elements based on their class attribute. Example: <code>.classname { font-size: 14px; }</code></li>
+                    <li>ID Selector: Selects a single HTML element based on its ID attribute. Example: <code>#idname { margin: 10px; }</code></li>
+                    <li>Universal Selector:Selects all HTML elements. Example: <code>* { box-sizing: border-box; }</code></li>
+                </ul>       
+                <h3> Declarations</h3>  
+                <p> Declarations consist of a property and a value. The property is the aspect of the element you want to change, and the value is what you want to change it to. Example: <code>color: red;</code> changes the text color to red.</p>
+                <p> Multiple declarations are separated by semicolons within the declaration block.</p> 
+                <pre>
+                    p {
+                    &ensp;color: red;
+                    &ensp;font-size: 16px;
+                    }
+                </pre>      
+                <p> In the above example, the selector is <code>p</code>, and the declaration block contains two declarations: <code>color: red;</code> and <code>font-size: 16px;</code>.</p>      
+                <p> CSS rules can be combined to create more specific selectors. For example:</p>
+                <pre>
+                    div p {
+                    &ensp;color: green;
+                    }
+                </pre>
+                <p> In this example, the selector <code>div p</code> selects all <code>&lt;p&gt;</code> elements that are inside a <code>&lt;div&gt;</code> element and changes their text color to green.</p>  
+
+            </section>
+            <section id="Adding CSS in HTML">
+                <h2><a class="nav-link" href="#Adding CSS in HTML">Adding CSS in HTML</a></h2>
+                <p>There are three ways to add CSS to HTML: Inline CSS, Internal CSS, and External CSS.</p>
+                <h3>Inline CSS</h3>
+                <p>Inline CSS is used to apply a unique style to a single HTML element. To use inline CSS, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+                <pre>
+                    &lt;h1 style="color:blue; text-align:center;"&gt;This is a heading&lt;/h1&gt;
+                </pre>
+                <h3>Internal CSS</h3>       
+                <p>Internal CSS is used to define a style for a single HTML page. To use internal CSS, add a &lt;style&gt; element inside the &lt;head&gt; section of the HTML page.</p>
+                <pre>
+                    &lt;head&gt;
+                    &ensp;&lt;style&gt;
+                    &ensp;&ensp;&ensp;body {
+                    &ensp;&ensp;&ensp;&ensp;background-color: lightblue;
+                    &ensp;&ensp;&ensp;}
+                    &ensp;&ensp;&ensp;h1 {
+                    &ensp;&ensp;&ensp;&ensp;color: white;
+                    &ensp;&ensp;&ensp;&ensp;text-align: center;
+                    &ensp;&ensp;&ensp;}
+                    &ensp;&ensp;&ensp;p {
+                    &ensp;&ensp;&ensp;&ensp;font-family: verdana;
+                    &ensp;&ensp;&ensp;&ensp;font-size: 20px;
+                    &ensp;&ensp;&ensp;}
+                    &ensp;&lt;/style&gt;
+                    &lt;/head&gt;
+                </pre>
+                <h3>External CSS</h3>
+                <p>External CSS is used to define styles for multiple HTML pages. To use external CSS, you need to create a separate CSS file and link it to your HTML file using the &lt;link&gt; element inside the &lt;head&gt; section of the HTML page.</p>
+                <pre>
+                    &lt;head&gt;
+                    &ensp;&lt;link rel="stylesheet" href="styles.css"&gt; 
+                    &lt;/head&gt;
+                </pre>
+                <p>In the above code, "styles.css" is the name of the external CSS file.</p>
+            </section>
+            <section id="CSS Comments">
+                <h2><a class="nav-link" href="#CSS Comments">CSS Comments</a></h2>
+                <p>Comments in CSS are used to explain the code and make it more readable. Comments are ignored by browsers and do not affect the rendering of the document. In CSS, comments are written inside /* and */.</p>
+                <pre>
+                    /* This is a comment in CSS */ 
+                    body {
+                    &ensp;background-color: lightblue; /* This sets the background color */
+                    }
+                </pre>
+            </section>
+            <Section id="assignments">
+                <h2><a class="nav-link" href="#assignments">Assignments</a></h2>
+                <p><strong>Some of the assignments will have their CSS code as internal CSS code. </strong><p>
+                <section id="selectors-assignment">
+                    <h3 id="Top Assignment on Selectors"><a class="nav-link" href="#Top Assignment on Selectors">Top Assignment on Selectors</a></h3>
+                    <p> here Im going to use some selectors (class selectors, id selectors, type selectors and universal selectors) to showcase the assignment here. </p>
+                    <h4>CSS Methods</h4>
+                    <p> I have attached an external css file to this project in the ~/css/styles.css file in the repo. Thats how external method works</p>
+                    <p> I have also used internal css method in this file itself in the &lt;head&gt; section to set some styles for the body and h1 tags. 
+                    I am assigning id="Top Assignment on Selectors" to the heading of this section. Now to target this id selector in the internal css method, I have used the following code:</p>
+                    <pre>
+                        #Top\ Assignment\ on\ Selectors { 
+                        &ensp;color: darkblue; 
+                        }
+                    </pre>
+                    <p>As you can see the back slashes are used to escape the spaces in the id selector. Ideally one should never use spaces and use hyphens or underscores instead. Hyphens are more preffered.
+                    Now the heading of this section is dark blue colored because of the above internal css code.</p>
+                    <p>Another method is the inline css method, which is used to apply a unique style to a single HTML element. To use inline CSS, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+                    <p style="color: green; font-weight: bold;"> This text is green and bold because of the inline css method used here in this &lt;p&gt; tag.</p>
+                    <p> Here is the code snippet for inline css:</p>
+                    <pre>
+                    &lt;p style="color: green; font-weight: bold;"&gt; This text is green and bold because of the inline css method used here in this &lt;p&gt; tag.&lt;/p&gt;
+                    </pre>
+                    <h4>Class Id Selectors</h4>
+                    <p> In the previous section we saw how I selected id="Top Assignment on Selectors" using the internal CSS method. In this assignment we need to assign and understand how class and id selectors work.
+                    In heirarchy, id selectors have more specificity than class selectors. This means that if both an id selector and a class selector target the same element, the styles defined in the id selector will take precedence over those defined in the class selector.</p>
+                    <div>
+                        <p class="example-class" id="example-id"> This paragraph has both a class and an id selector. The text color should be red because of the id selector having more specificity than the class selector.</p>
+                        <p> Here is the code snippet for the above paragraph:</p>
+                        <pre>
+                            &lt;style&gt;
+                            &ensp;.example-class {
+                            &ensp;&ensp;color: blue;
+                            &ensp;}
+                            &ensp;#example-id {
+                            &ensp;&ensp;color: red;
+                            &ensp;}
+                            &lt;/style&gt;  
+                            &lt;p class="example-class" id="example-id"&gt; This paragraph has both a class and an id selector. The text color should be red because of the id selector having more specificity than the class selector.&lt;/p&gt;
+                        </pre>
+                        <p> With class selector, we can select all the elements with same class at a time and write a single css syntax that applies to all the elements with that specific class. But this doesn't apply to id because we can assign a specific id to only one element.</p>
+
+                    </div>
+                    <p> now lets group some selectors</p>
+                    <p> Im writing these next 4 list items with classes and ids named after themselves. </p>
+                    <ul><li class="list-item-1" id="list-item-1">List Item 1</li>
+                        <li class="list-item-2" id="list-item-2">List Item 2</li>
+                        <li class="list-item-3" id="list-item-3">List Item  3</li>
+                        <li class="list-item-4" id="list-item-4">List Item  4</li>
+                    </ul>
+                    <p> Now I will group the class selectors and id selectors separated by comma in the internal css method to apply same styles to them. The code snippet is as below: </p>
+                    <pre>
+                    .list-item-1, .list-item-2, .list-item-3, .list-item-4 {
+                    &ensp;color: purple;
+                    &ensp;font-weight: bold;
+                    }
+                    #list-item-1, #list-item-2, #list-item-3, #list-item-4 {
+                    &ensp;font-size: 18px;
+                    }
+                    </pre>
+                    <h4>Chaining Selectors</h4>
+                    <p>Now lets look at chaining selctors</p>
+                    <p> This is a list of elements with multiple classes defined as themselves.</p>
+                    <ul>
+                        <li class="chain class-one" id="chain-one">class"chain class-one"</li>
+                        <li class="chain class-two" id="chain-two">class"chain class-two"</li>
+                        <li class="chain class-three" id="chain-three">class"chain class-three"</li>
+                    </ul>
+                    <p> The code snippet is as follows:</p>
+                    <pre>
+                        .chain.class-one {
+                        &ensp;color: orange;
+                        }
+                        .chain {
+                        &ensp;color: green;
+                        }
+                    </pre>
+                    <p> As you can see how the 1st one is in red color while the other two are in green color. If we write the classes assigned to an element with no space we are chaining the selectors to pick the element that contains specifically all those selectors.</p>
+                    <h4>Descending Combinators</h4>
+                    <p> This is similar to how you navigate through folders in a linux/ wsl command line with cd command. more or less like the folder tree. If you have more than 1 similar parent and child elements like &lt;p class="paragraphs"&gt; within &lt;h2 class="subheading"&gt;tags and you want to target a specific &lt;p class="paragraphs"&gt; child element within a specific &lt;h2 class="subheading"&gt; element, we use descending combinators.</p>
+                    <p> Here is an example: (observe the syntax, a single space between the classes defines descending combinator.)</p>
+                    <pre>
+                        h2.subheading p.paragraphs {
+                        &ensp;color: brown;       
+                        }   
+                    </pre>
+                    <p> In the above code snippet, we are targeting only the &lt;p class="paragraphs"&gt; elements that are descendants of &lt;h2 class="subheading"&gt; elements. Any &lt;p class="paragraphs"&gt; elements that are not within an &lt;h2 class="subheading"&gt; element will not be affected by this rule.</p>
+                    <p> A more practical use case would be to target all the &lt; p &gt; elements within all &lt; h3 &gt; elements with a single command as follows:</p>
+                    <pre>   
+                        h3 p {
+                        &ensp;font-style: italic;
+                        }
+                    </pre>
+                    <p> Now this will format all the &lt;p&gt; elements within all &lt;h3&gt; elements with italic font style.</p>
+                </section>
+                <section id="cascade-assignment">
+                    <h3><a class="nav-link" href="#cascade-assignment">Cascade Assignment</a></h3>
+                    <p> I'm copying the html code directly from the assignments provided by the TOP here to finish my assignment.</p>
+                    <p> Here is the assignment HTML code:</p>
+                    <pre>    
+                        &lt;p class="para"&gt;I'm just a paragraph with extra bold text!&lt;/p&gt;
+                        &lt;p class="para small-para"&gt;I'm a smaller paragraph, also with extra bold text&lt;/p&gt;
+                        &lt;button id="confirm-button" class="button confirm"&gt;Confirm&lt;/button&gt;
+                        &lt;button id="cancel-button" class="button cancel"&gt;Cancel&lt;/button&gt;
+                        &lt;div class="text"&gt;I'm a div with thin text!&lt;/div&gt;
+                        &lt;div class="text"&gt;I'm a div with thin text and a child div!
+                        &ensp;&lt;div class="text child"&gt;I'm a smaller child div with extra bold text.&lt;/div&gt;
+                        &lt;/div&gt;
+                    </pre>
+                    <h4>Rendered HTML from the above code with CSS modification:</h4>
+                    <section class="rendered-html">
+                        <p class="para">I'm just a paragraph with extra bold text!</p>
+                        <p class="para small-para">I'm a smaller paragraph, also with extra bold text!</p>
+                        <button id="confirm-button" class="button confirm">Confirm</button>
+                        <button id="cancel-button" class="button cancel">Cancel</button>
+                        <div class="text">I'm a div with thin text!</div>
+                        <div class="text">I'm a div with thin text and a child div!
+                        <div class="text child">I'm a smaller child div with extra bold text.</div>
+                        </div>
+                    </section>
+                    <p>Here is the CSS Code for the above assignment HTML code:</p>
+                    <pre>
+                        .para {
+                            &ensp;font-weight: bold;
+                        }
+                        .para.small-para {
+                            &ensp;font-size: 0.7em;
+                        }
+                        #confirm-button {
+                            &ensp;background-color:green
+                        }
+                        .button {
+                            &ensp;font-weight:bold;
+                        }
+                        #cancel-button {
+                            &ensp;background-color:red
+                        }
+                        div.text {
+                            &ensp;font-weight: thin;
+                        }
+                        div .child{
+                            &ensp;font-weight: bold;
+                            &ensp;font-size: 0.7em;
+                        }
+                    </pre>
+                </section>
+            </Section>
+            <section id="hierarchy-cascade">
+                <h2><a class="nav-link" href="#hierarchy-cascade">Hierarchy/Cascade</a></h2>
+                <p>I learnt this through this experimentation. Let's unroll this stuff!!</p>
+                <p>On my local machine, it was working fine. The issue was github.io pages was not interpreting my css properly and some of the code was not reflecting there.</p>
+                <p>I added CSS internally and I also made an external styles css sheet. I defined some stuff in the external sheet, but it was not reflecting in this page. I wondered what the reason would be?</p>
+                <p> Then I realised, Internal CSS takes precedence over External CSS when both are applied to the same element. BUT, BUT, BUT... I didn't define those classes in the internal CSS code. I wondered why it was conflicting with the external CSS file.</p>
+                <p>Then I made this simple fix. In the head element, Style code was written last and link tag was written first. I changed the order. cut the link tag line and paste it at the bottom of style element within the head element.
+                </p><p>I remembered that the last line has more precedence in CSS hierarchy. So the external CSS file should be written last in the head element to take precedence over the internal CSS code.</p>
+                <p>And it worked!</p>
+                <p> I had to make couple of git commits to figure this out though! It did help me understand the CSS cascade better. (That itch to not make a git commit until there is a significant change was making me feel bad though LOL.)</p>
+            </section>
+
+        </article>
+    </body>
 </html>

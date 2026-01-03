@@ -1,19 +1,15 @@
-/* css file */
-* {
-    box-sizing: border-box;
-    margin-top:auto;
-    margin-bottom:1rem;
-    padding:0;
-    color: rgb(0, 0, 38);
+/* main css file */
+
+*{
+  box-sizing: border-box;
+  margin-top:auto;
+  margin-bottom:1rem;
+  padding:0;
+  color: rgb(0, 0, 38);
 }
 
 navigation{
   margin: 0.5rem;
-}
-
-nav{
-  border-left:2px solid black;
-  padding-left: 1rem;
 }
 
 navigation ul{
@@ -23,38 +19,53 @@ navigation ul{
 }
 
 navigation ul, navigation li{
-margin:0;
-flex:display;
-justify-content: right;
-justify-items: bottom;
-
+  margin:0;
+  flex:display;
+  justify-content: right;
+  justify-items: bottom;
 }
 
-
-ul,ol{
-  margin-left:1.5em;
-  margin-right: auto;
+/* adds style to table of contents section */
+nav{
+  border-left:2px solid black;
+  padding-left: 1rem;
 }
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+  margin: 1vw;
+  padding: 1vw;
+  background-color: #c9eadb;
+}
+
+/* aligns article body to the centre of the page */
 article{
   margin-left:10vw;
   margin-right: 10vw;
 }
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
-    letter-spacing: 0.05em;
-    margin: 1vw;
-    padding: 1vw;
-    background-color: #c9eadb;
-}
+
+/* different font for headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
     
 }
+
+/* adds indentation to lists */
+ul,ol{
+  margin-left:1.5em;
+  margin-right: auto;
+}
+
+/* adds style to code text */
 code {
   background-color: rgb(125, 221, 188);
   border: 1px solid #370000;
   padding: 2px 4px;
-  border-radius: 4px;}
+  border-radius: 4px;
+}
+
+/* adds style to code-boxes */
 pre,.rendered-html  {
   background-color: #bac8b5;
   border: 1px solid #001406;
@@ -64,10 +75,10 @@ pre,.rendered-html  {
   width:auto;
   height:auto;
   overflow-x:auto;
+  white-space: pre-line;
 }
 
-
-
+/* removes the underline of subheadings added as links */
 .nav-link {
   text-decoration:none;
   color:black;
