@@ -88,6 +88,8 @@
                     <li><a href="#selectors-assignment">Top Assignment on Selectors</a></li>
                     <li><a href="#cascade-assignment">Cascade Assignment</a></li>
                     <li><a href="#hierarchy-cascade">Hierarchy/Cascade</a></li>
+                    <li><a href="#the-box">The Box Model</a></li>
+                    <li><a href="#block-inline">Block vs Inline Elements</a></li>
                 </ol>
             </nav>
 
@@ -336,7 +338,75 @@
                 <p>And it worked!</p>
                 <p> I had to make couple of git commits to figure this out though! It did help me understand the CSS cascade better. (That itch to not make a git commit until there is a significant change was making me feel bad though LOL.)</p>
             </section>
+            <section id="the-box">
+                <h2><a class="nav-link" href="#the-box">The Box Model</a></h2>
+                <p>The CSS box model is a fundamental concept in web design and development that describes how elements on a web page are structured and how they interact with each other. According to the box model, every HTML element is represented as a rectangular box that consists of four main components: content, padding, border, and margin.</p>
+                <ul>
+                    <li><strong>Content:</strong> This is the innermost part of the box and contains the actual content of the element, such as text or images.</li>
+                    <li><strong>Padding:</strong> Padding is the space between the content and the border. It creates space around the content within the element.</li>
+                    <li><strong>Border:</strong> The border is a line that surrounds the padding (if any) and content. It can be styled with different colors, widths, and styles (solid, dashed, etc.).</li>
+                    <li><strong>Margin:</strong> Margin is the outermost layer of the box and creates space between the element and other elements on the page. It separates the element from its surroundings.</li>
+                </ul>
+                <p>The total size of an element's box is determined by adding together the width and height of the content area, along with any padding, border, and margin. Understanding the box model is crucial for controlling layout and spacing in web design.</p>   
+                <pre class="text-diagram">
+                    
+                  +---------------------------+
+                  |&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Margin&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|
+                  |&ensp;&ensp;+---------------------+&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Border&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;+---------------+&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;&ensp;Padding&ensp;&ensp;&ensp;&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;+---------+&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;|&ensp;Content&ensp;|&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;+---------+&ensp;&ensp;|&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;|&ensp;&ensp;+---------------+&ensp;&ensp;|&ensp;&ensp;|
+                  |&ensp;&ensp;+---------------------+&ensp;&ensp;|
+                  +---------------------------+
 
+                </pre>
+                <p>Syntax for box model properties:</p>
+                <pre>
+                    element {
+                   <code style="margin:0;"> &ensp;box-sizing: content-box; /* or border-box */ </code>
+                    &ensp;width: 300px; /* Width of the content area */
+                    &ensp;height: 200px; /* Height of the content area */
+                    &ensp;padding: 20px; /* Space between content and border */
+                    &ensp;border: 5px solid black; /* Border around the padding */
+                    &ensp;margin: 10px; /* Space outside the border */
+                    }
+                </pre>
+                
+            </section>
+            <section id="block-inline">
+                <h2><a class="nav-link" href="#block-inline">Block vs Inline Elements</a></h2>
+                <p>In HTML and CSS, elements can be classified into two main categories based on their display behavior: block-level elements and inline elements. Understanding the difference between these two types of elements is crucial for effective web design and layout.</p>
+                <h3>Block-Level Elements</h3>
+                <p>Block-level elements are those that take up the full width available in their parent container and start on a new line. They create a "block" of content that is visually separated from other elements. Common block-level elements include:</p>
+                <ul>
+                    <li>&lt;div&gt;</li>
+                    <li>&lt;p&gt;</li>
+                    <li>&lt;h1&gt; to &lt;h6&gt;</li>
+                    <li>&lt;ul&gt; and &lt;ol&gt;</li>
+                    <li>&lt;section&gt;</li>
+                </ul>
+                <h3>Inline Elements</h3>
+                <p>Inline elements, on the other hand, do not start on a new line and only take up as much width as necessary to fit their content. They flow within the surrounding text and do not create a separate block. Common inline elements include:</p>
+                <ul>
+                    <li>&lt;span&gt;</li>
+                    <li>&lt;a&gt;</li>
+                    <li>&lt;strong&gt;</li>
+                    <li>&lt;em&gt;</li>
+                    <li>&lt;img&gt;</li>
+                </ul>
+                <h3>Key Differences</h3>
+                <ul>
+                    <li><strong>Display Behavior:</strong> Block-level elements start on a new line and take up the full width, while inline elements flow within the text and only take up as much width as needed.</li>
+                    <li><strong>Box Model:</strong> Block-level elements respect all box model properties (width, height, margin, padding, border), while inline elements only respect horizontal properties (margin-left, margin-right, padding-left, padding-right).</li>
+                    <li><strong>Nesting:</strong> Block-level elements can contain other block-level and inline elements, while inline elements can only contain other inline elements.</li>
+                </ul>
+                <p>Understanding when to use block-level versus inline elements is essential for creating well-structured and visually appealing web pages.</p> 
+            </section>
+            <p><a href="#top" style="background-color: aquamarine; border: solid 1px black; border-radius:4px;">Back to top</a></p>
         </article>
     </body>
 </html>

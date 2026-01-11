@@ -1,7 +1,13 @@
 /* main css file */
+html{
+  box-sizing:border-box;
+}
+
+*, *::before, *::after{
+  box-sizing:inherit;
+}
 
 *{
-  box-sizing: border-box;
   margin-top:auto;
   margin-bottom:1rem;
   padding:0;
@@ -61,8 +67,10 @@ ul,ol{
 code {
   background-color: rgb(125, 221, 188);
   border: 1px solid #370000;
-  padding: 2px 4px;
+  padding-left: 2px;
+  padding-right: 2px;
   border-radius: 4px;
+  display: inline-block;
 }
 
 /* adds style to code-boxes */
