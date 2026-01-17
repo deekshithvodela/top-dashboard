@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Flexbox
+        </title>
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <navigation>
+            <ul>
+                <li class="logo"><a href="../../index.html" class="logo">DV_</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/e-logs.html">E-Log</a></li>
+                <li><a href="../../pages/recipes.html">Recipes</a></li>
+                <li><a href="../../pages/about.html">About</a></li>
+            </ul>
+        </navigation>
+
+        <article>
+            <h1>Deekshith's TOP Dashboard - Flexbox</h1>
+            <nav id="table-of-contents">
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#Introduction">Introduction</a></li>
+                    <li><a href="#container&item">Flex Container & Flex Items</a></li>
+                    <li><a href="#growing-and-shrinking">Growing and Shrinking Flex Items</a></li>
+                    <li><a href="#Flexbox-properties">Common Flexbox Properties</a></li>
+                    <li><a href="#axes">Flexbox Axes</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ol>
+            </nav>
+            <section id="Introduction">
+                <h2><a href="#Introduction" class="nav-link">Introduction</a></h2>
+                <p>Flexbox, or the Flexible Box Layout, is a CSS layout model that allows you to design complex layouts more easily and efficiently. It provides a way to distribute space along a single row or column, making it easier to align and distribute items within a container.</p>
+                <p>With Flexbox, you can create responsive designs that adapt to different screen sizes and orientations. It offers powerful alignment and spacing options, allowing you to control the positioning of elements within a container with ease.</p>
+                <p>Some key features of Flexbox include:</p>
+                <ul>
+                    <li>Flexible sizing: Flexbox allows items to grow or shrink based on available space, making it easier to create fluid layouts.</li>
+                    <li>Alignment: You can easily align items vertically and horizontally within a container using properties like justify-content and align-items.</li>
+                    <li>Order: Flexbox allows you to change the order of items within a container without changing the HTML structure.</li>
+                    <li>Direction: You can control the direction of items (row or column) using the flex-direction property.</li>
+                </ul>
+                <p>Overall, Flexbox is a powerful tool for creating modern web layouts that are flexible, responsive, and easy to maintain.</p>
+
+            </section>
+            <section id="container&item">
+                <h2><a href="#container&item" class="nav-link">Container & Flex Items</a></h2>
+                <p>In Flexbox, a flex container is the parent element that contains flex items. The flex container is defined by setting the display property to flex or inline-flex on the parent element.</p>
+                <p>Flex items are the child elements within the flex container. These items can be any HTML element, such as divs, images, or text elements. Once an element is designated as a flex item, it gains access to various Flexbox properties that allow for flexible layout and alignment.</p>
+                <p>Here is an example of a simple flex container with three flex items:</p>
+                <section class="rendered-html">
+                    <style>
+                        .flex-item
+                        {
+                            border:2px solid black;
+                            background-color: #f9d5e5;
+                            margin:0;
+                            padding:0;
+                        }
+                    </style>
+                    <div class="flex-container">
+                      <div class="flex-item">Item 1</div>
+                      <div class="flex-item">Item 2</div>
+                      <div class="flex-item">Item 3</div>
+                    </div>
+                
+                </section>
+                <p>The HTML code for the above example is as follows:</p>
+                <pre>
+                    &lt;style&gt;
+                        &ensp;.flex-item
+                        &ensp;{
+                            &ensp;&ensp;border:2px solid black;
+                            &ensp;&ensp;background-color: #f9d5e5;
+                            &ensp;&ensp;margin:0;
+                            &ensp;&ensp;padding:0;
+                        &ensp;}
+                    &lt;/style&gt;
+                    &lt;div class="flex-container"&gt;
+                    &ensp;&lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+                    &ensp;&lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+                    &ensp;&lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+                    &lt;/div&gt;
+                </pre>
+                <p>In this example, the div with the class "flex-container" is the flex container, and the three divs with the class "flex-item" are the flex items.</p>
+                <p>By using Flexbox properties on the flex container and flex items, you can control the layout, alignment, and spacing of the items within the container.</p>  
+            </section>
+            <section id="growing-and-shrinking">
+                <h2><a href="#growing-and-shrinking" class="nav-link">Growing and Shrinking Flex Items</a></h2>
+                <p>Flexbox allows flex items to grow or shrink based on the available space within the flex container. This is controlled using the flex-grow and flex-shrink properties.</p>
+                <p>The flex-grow property specifies how much a flex item should grow relative to the other items in the container when there is extra space available. A higher value means the item will take up more of the available space.</p>
+                <p>The flex-shrink property specifies how much a flex item should shrink relative to the other items in the container when there is not enough space available. A higher value means the item will shrink more when space is limited.</p>
+                <p>Here is an example demonstrating flex-grow and flex-shrink:</p>
+                <section class="rendered-html">
+                    <style>
+                        .flex-item
+                        {
+                            border:2px solid black;
+                            background-color: #f9d5e5;
+                            margin:0;
+                            padding:10px;
+                        }
+                        .flex-container
+                        {
+                            display: flex;
+                        }
+                    </style>
+                    <div class="flex-container">
+                      <div class="flex-item" style="flex-grow: 1;">Item 1 (flex-grow: 1)</div>
+                      <div class="flex-item" style="flex-grow: 2;">Item 2 (flex-grow: 2)</div>
+                      <div class="flex-item" style="flex-grow: 1;">Item 3 (flex-grow: 1)</div>
+                    </div>
+                </section>
+                <p>In this example, Item 2 will take up twice as much space as Item 1 and Item 3 when there is extra space available in the flex container.</p>
+                <p>By using the flex-grow and flex-shrink properties, you can create flexible layouts that adapt to different screen sizes and content requirements.</p>
+            </section>
+            <section id="Flexbox-properties">
+                <h2><a href="#Flexbox-properties" class="nav-link">Common Flexbox Properties</a></h2>
+                <p>Here are some common Flexbox properties that you can use to control the layout and alignment of flex items within a flex container:</p>
+                <ul>
+                    <li><strong>display:</strong> Defines a flex container. Example: display: flex;</li>
+                    <li><strong>flex-direction:</strong> Specifies the direction of the flex items. Example: row, column;</li>
+                    <li><strong>justify-content:</strong> Aligns flex items along the main axis. Example: flex-start, center, space-between;</li>
+                    <li><strong>align-items:</strong> Aligns flex items along the cross axis. Example: stretch, center, flex-end;</li>
+                    <li><strong>flex-wrap:</strong> Controls whether flex items wrap onto multiple lines. Example: nowrap, wrap;</li>
+                    <li><strong>flex-flow:</strong> A shorthand property for flex-direction and flex-wrap.</li>
+                    <li><strong>flex-grow:</strong> Specifies how much a flex item should grow relative to others.</li>
+                    <li><strong>flex-shrink:</strong> Specifies how much a flex item should shrink relative to others.</li>
+                    <li><strong>flex-basis:</strong> Defines the default size of a flex item before any growing or shrinking.</li>
+                    <li><strong>order:</strong> Controls the order of flex items within the container.</li>
+                    <li><strong>align-self:</strong> Allows individual flex items to override the align-items property.</li>
+                    <li><strong>gap:</strong> Defines the space between flex items.</li>
+                </ul>
+                <p>By using these properties, you can create complex and responsive layouts with ease using Flexbox.</p>
+            </section>
+            <section id="axes">
+                <h2><a href="#axes" class="nav-link">Flexbox Axes</a></h2>
+                <p>Understanding the main and cross axes is crucial for working with Flexbox:</p>
+                <ul>
+                    <li><strong>Main Axis:</strong> The primary axis along which flex items are laid out. It's determined by the flex-direction property.</li>
+                    <li><strong>Cross Axis:</strong> The axis perpendicular to the main axis. It's also determined by the flex-direction property.</li>
+                </ul>
+            </section>
+            <section id="assignments">
+                <h2><a href="#assignments" class="nav-link">Assignments</a></h2>
+                <p> <a href="../../pages/recipes.html">1. Recipe website landing page</a></p>
+            </section>
+            <section id="resources">
+                <h2><a href="#resources" class="nav-link">Resources</a></h2>
+                <ul>
+                    <li><a href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/">Interactive Guide to Flexbox - Josh W Comeau</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox - CSS-Tricks</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">MDN Web Docs - Basic Concepts of Flexbox</a></li>
+                    <li><a href="https://flexboxfroggy.com/">Flexbox Froggy - A game for learning Flexbox</a></li>
+                </ul>
+            </section>
+            <p><a href="#top"><code>Go to top</code></a></p>
+        </article>
+    </body>
+</html>

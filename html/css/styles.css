@@ -1,4 +1,7 @@
 /* main css file */
+
+/** sets box-sizing to border-box for easier sizing of elements */
+
 html{
   box-sizing:border-box;
 }
@@ -8,27 +11,80 @@ html{
 }
 
 *{
-  margin-top:auto;
-  margin-bottom:1rem;
-  padding:0;
   color: rgb(0, 0, 38);
+  padding:0;
 }
 
-navigation{
-  margin: 0.5rem;
+/** styles navigation bar */
+
+navigation {
+  display:block;
+  box-sizing: border-box;
+  width:80vw;
+  margin: auto;
+  padding-top:1rem;
+  padding-bottom:1rem;
 }
 
 navigation ul{
-  border:2px solid black;
-  padding: 0.5rem;
-  
+  list-style-type: none;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: flex-end;
+  gap:1rem;
+  margin:0;
+  padding-left:0;
 }
 
-navigation ul, navigation li{
+navigation li{
+flex:0 0 auto;
+margin:0;
+}
+
+navigation .logo{
+  margin-right:auto;
+  margin-left:0;
+}
+
+/* styles body */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+  line-height: auto;
+  padding: 0;
   margin:0;
-  flex:display;
-  justify-content: right;
-  justify-items: bottom;
+  background-color: #dbffef;
+}
+
+/* styles text */
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.3;
+}
+
+p{
+   padding-bottom:0.6rem;
+   padding-top:0.2rem;
+}
+
+li,h1,h2,h3,h4,h5,h6,textarea
+{
+  margin-bottom:0.4rem;
+}
+
+/* adds indentation to lists */
+ul,ol{
+  display:block;
+  margin-left:2rem;
+}
+
+/* aligns article body to the centre of the page */
+article{
+width:80vw;
+margin: 0 auto;
 }
 
 /* adds style to table of contents section */
@@ -37,34 +93,11 @@ nav{
   padding-left: 1rem;
 }
 
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
-  letter-spacing: 0.05em;
-  margin: 1vw;
-  padding: 1vw;
-  background-color: #c9eadb;
-}
-
-/* aligns article body to the centre of the page */
-article{
-  margin-left:10vw;
-  margin-right: 10vw;
-}
-
-/* different font for headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-/* adds indentation to lists */
-ul,ol{
-  margin-left:1.5em;
-  margin-right: auto;
-}
-
 /* adds style to code text */
 code {
+  
+  font-family: monospace, serif, times, sans-serif;
+  font-size: 0.9em;
   background-color: rgb(125, 221, 188);
   border: 1px solid #370000;
   padding-left: 2px;
@@ -75,7 +108,9 @@ code {
 
 /* adds style to code-boxes */
 pre {
-  background-color: #bac8b5;
+  font-family: monospace, serif, times, sans-serif;
+  font-size: 0.9em;
+  background-color: #fffb7a8c;
   border: 1px solid #001406;
   padding: 12px;
   border-radius: 6px;
@@ -86,18 +121,19 @@ pre {
 }
 
 .rendered-html  {
-  background-color: #bac8b5;
+  font-family: monospace, serif, times, sans-serif;
+  font-size: 0.9em;
+  background-color: #fffb7a5d;
   border: 1px solid #001406;
   padding: 12px;
   border-radius: 6px;
   width:auto;
   height:auto;
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
-/* removes the underline of subheadings added as links */
+/* styles links */
 .nav-link {
-  text-decoration:none;
   color:black;
 }
 
@@ -106,14 +142,23 @@ pre {
   color:rgb(0, 0, 0);
 }
 
-img {
-  max-width: 100%;
-  width:auto;
-  height: auto;
-  display: block;
+a{
+  text-decoration: none;
+  color: rgb(0, 0, 102);
 }
 
+/* styles images to be responsive */
+img {
+  display: block;
+  max-width: 100%;
+  max-height:75vh;
+  width:auto;
+  height: auto;
+  margin:1rem auto;
+}
+
+/* styles the text selection */
 ::selection {
-  background: yellow;
+  background: rgb(139, 228, 194);
   color: black;
 }

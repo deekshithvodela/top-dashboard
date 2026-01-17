@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+/** Hero Section Styles **/
+.hero, footer {
+    background-color:rgb(10, 0, 66);
+}
+
+/** hero footer text white **/
+navigation a,footer p,.hero p, .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero a {
+    color: white;
+}
+
+/** Header Section Styles **/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    flex-wrap:wrap-reverse;
+    padding:1rem 5vw;
+    
+}
+
+.header-item {
+    min-width: 220px;
+    height: auto;
+    max-width: 40vw;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    flex: 1 1 0; 
+    
+}
+.header-image img {
+    min-width: 40vw;
+    max-height: 30vh;
+    aspect-ratio: 1/1;
+    border:solid 2px blue;
+    border-radius:0.5em;
+    object-fit: cover;
+    overflow-x: auto;
+}
+
+
+/** Recipe List Styles **/
+.content h2{
+    text-align: center;
+    margin: 1rem;
+}
+.recipe-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+    padding-top:0;
+}
+.recipe-list h3, .recipe-list p{
+    font-size: 0.7em;
+}
+
+.recipe-list img{
+    min-width: 20vw;
+    height: auto;
+    aspect-ratio: 1/1;
+    border:solid 2px blue;
+    border-radius:0.5em;
+    object-fit: cover;
+}
+.recipe-item{
+    min-width: 220px;
+    height: auto;
+    max-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex: 0 1 auto;  
+}
+
+/** Quote Section Styles **/
+div.quote {
+    display: flex ;
+    flex-direction: column;
+    background-color: rgba(202, 202, 202, 0.54);
+    align-items: center;
+}
+quote p {
+    font-style: italic;
+    text-align: center;
+    padding: 3rem 30vw;
+    font-size: 1.2rem;
+}
+span.author {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+/** Newsletter Section Styles **/
+.message-box {
+    display: flex;
+    flex-flow:wrap;
+    gap:1rem;
+    padding:1rem;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    justify-content: center;
+    background-color: rgb(164, 217, 234);
+    border:0.1rem solid rgb(10, 0, 66);
+}
+.message-box div{
+    flex:0 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/** footer Styles **/
+footer {
+    font-size:0.9rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin:0;
+    text-align: center;
+}
+
+
+button.signup{
+    margin-top:1rem;
+    flex:0;
+    align-self: flex-start;
+    text-wrap:nowrap;
+}
+
+.newsletter button{
+    align-self: center;
+    text-wrap:nowrap;
+}
+
+button {
+    flex:0 0 auto;
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 0, 66);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
