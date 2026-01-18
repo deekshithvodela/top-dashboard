@@ -132,7 +132,7 @@ footer {
 
 button.signup{
     margin-top:1rem;
-    flex:0;
+    flex:0 0 auto;
     align-self: flex-start;
     text-wrap:nowrap;
 }
